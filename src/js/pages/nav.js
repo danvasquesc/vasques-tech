@@ -1,12 +1,4 @@
-export function initNavbar() {
-  const header = document.getElementById("header");
-  const menuToggle = document.getElementById("menuToggle");
-  const navMenu = document.getElementById("navMenu");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  if (!header || !menuToggle || !navMenu) return;
-
-  // === Sombra no scroll ===
+function handleHeaderShadow(header) {
   const toggleHeaderShadow = () => {
     if (window.scrollY > 50) {
       header.classList.add("scrolled");
@@ -15,23 +7,25 @@ export function initNavbar() {
     }
   };
   window.addEventListener("scroll", toggleHeaderShadow);
+}
 
-  // === Abrir / Fechar menu ===
+function handleMenuToggle(menuToggle, navMenu, navLinks) {
   const toggleMenu = () => {
     menuToggle.classList.toggle("active");
     navMenu.classList.toggle("active");
   };
+
   menuToggle.addEventListener("click", toggleMenu);
 
-  // === Fechar menu ao clicar em um link ===
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       menuToggle.classList.remove("active");
       navMenu.classList.remove("active");
     });
   });
+}
 
-  // === Esconder navbar ao rolar pra baixo ===
+function handleHideOnScroll(header) {
   let lastScroll = 0;
   const scrollThreshold = 5;
 
@@ -44,8 +38,23 @@ export function initNavbar() {
     } else {
       header.style.transform = "translateY(0)";
     }
+
     lastScroll = currentScroll;
   };
 
   window.addEventListener("scroll", hideOnScroll);
+}
+
+export function initNavbar() {
+  const header = document.getElementById("header");
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Aqui evita erros caso algum elemento não exista
+  if (!header || !menuToggle || !navMenu) return;
+
+  handleHeaderShadow(header);
+  handleMenuToggle(menuToggle, navMenu, navLinks);
+  handleHideOnScroll(header);
 }

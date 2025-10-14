@@ -1,7 +1,9 @@
 import { initNavbar } from "../../js/pages/nav.js";
+import { initServices } from "../../js/pages/services.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
+  initServices();
 
   console.log(
     "%cVasques Tech",
