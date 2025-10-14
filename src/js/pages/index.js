@@ -1,16 +1,11 @@
 import { initNavbar } from "../../js/pages/nav.js";
 import { initServices } from "../../js/pages/services.js";
+import { initSmoothScroll } from "../../js/global/smoothScroll.js";
+import { initConsoleMessage } from "../../js/global/consoleMessage.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initServices();
-
-  console.log(
-    "%cVasques Tech",
-    "color: #FF4500; font-size: 24px; font-weight: bold;"
-  );
-  console.log(
-    "%cSite desenvolvido com HTML, CSS e JavaScript puro",
-    "color: #b0b0b0; font-size: 12px;"
-  );
+  initSmoothScroll();
+  initConsoleMessage();
 });
