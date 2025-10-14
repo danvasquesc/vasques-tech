@@ -1,29 +1,251 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vasques Tech - Manutenção e Suporte Técnico de Notebooks</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./src/css/pages/index.css" />
 
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header/NavBar -->
+    <header class="header" id="header">
+      <nav class="navbar">
+        <div class="container">
+          <a href="#inicio" class="logo">
+            <span class="logo-text">Vasques Tech</span>
+          </a>
 
+          <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#inicio" class="nav-link">Início</a></li>
+            <li><a href="#servicos" class="nav-link">Serviços</a></li>
+            <li><a href="#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="#contato" class="nav-link">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Bem-vindo à <span class="highlight">Vasques Tech</span>
+            </h1>
+            <p class="hero-subtitle">
+              Soluções práticas e acessíveis para o seu notebook.
+            </p>
+            <a
+              href="https://wa.me/5517992297000?text=Olá%20Dan!%20Vim%20pelo%20site.%20Gostaria%20de%20um%20orçamento%20sobre%20meu%20notebook."
+              class="btn btn-primary"
+              target="_blank"
+            >
+              Fazer Orçamento
+            </a>
+          </div>
+          <div class="hero-image">
+            <div class="hero-illustration">💻</div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Services -->
+      <section class="services" id="servicos">
+        <div class="container">
+          <h2 class="section-title">Meus Serviços</h2>
+          <p class="section-subtitle">Soluções completas para seu notebook, só entrar em contato</p>
 
-</head>
-<body>
-    
+          <div class="services-grid">
+            <div class="service-card" data-animate>
+              <i class="bi bi-device-hdd"></i>
+              <h3 class="service-title">Upgrade de RAM e SSD</h3>
+              <p class="service-description">
+                Aumente a velocidade e desempenho do seu notebook com upgrades
+                de memória RAM e/ou SSD.
+              </p>
+              <a
+                href="https://wa.me/5517992297000?text=Olá%20Dan!%20Gostaria%20de%20um%20orçamento%20para%20Upgrade%20de%20RAM%20e/ou%20SSD"
+                class="service-btn"
+                target="_blank"
+              >
+                Orçamento <span class="arrow">→</span>
+              </a>
+            </div>
 
+            <div class="service-card" data-animate>
+              <i class="bi bi-gear"></i>
+              <h3 class="service-title">Formatação</h3>
+              <p class="service-description">
+                Formatação completa para deixar seu notebook como novo,
+                eliminando vírus e problemas.
+              </p>
+              <a
+                href="https://wa.me/5517992297000?text=Olá%20Dan!%20Gostaria%20de%20um%20orçamento%20para%20Formatação"
+                class="service-btn"
+                target="_blank"
+              >
+                Orçamento <span class="arrow">→</span>
+              </a>
+            </div>
 
+            <div class="service-card" data-animate>
+              <i class="bi bi-windows"></i>
+              <h3 class="service-title">Instalação de Windows</h3>
+              <p class="service-description">
+                Instalação ou reinstalação do Windows, configuração do sistema e todos os drivers necessários.
+              </p>
+              <a
+                href="https://wa.me/5517992297000?text=Olá%20Dan!%20Gostaria%20de%20um%20orçamento%20para%20Instalação%20de%20Windows"
+                class="service-btn"
+                target="_blank"
+              >
+                Orçamento <span class="arrow">→</span>
+              </a>
+            </div>
 
+            <div class="service-card" data-animate>
+              <i class="bi bi-terminal"></i>
+              <h3 class="service-title">Instalação de Linux</h3>
+              <p class="service-description">
+                Instalação do Linux Mint e Zorin OS - sistemas leves e gratuitos
+                para seu notebook.
+              </p>
+              <a
+                href="https://wa.me/5517992297000?text=Olá%20Dan!%20Gostaria%20de%20um%20orçamento%20para%20Instalação%20de%20Linux"
+                class="service-btn"
+                target="_blank"
+              >
+                Orçamento <span class="arrow">→</span>
+              </a>
+            </div>
 
-     <!-- JS -->
+            <div class="service-card" data-animate>
+              <i class="bi bi-cpu"></i>
+              <h3 class="service-title">Indicação de Peças</h3>
+              <p class="service-description">
+                Ajudo você a escolher as melhores peças com excelente
+                custo-benefício, de acordo com sua necessidades.
+              </p>
+              <a
+                href="https://wa.me/5517992297000?text=Olá%20Dan!%20Gostaria%20de%20uma%20indicação%20de%20peças"
+                class="service-btn"
+                target="_blank"
+              >
+                Orçamento <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about" id="sobre">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-image">
+              <div class="about-illustration">👨‍💻</div>
+            </div>
+            <div class="about-text">
+              <h2 class="section-title">Quem sou eu</h2>
+              <p class="about-description">
+                Meu nome é <strong>Dan Vasques</strong>. Sou Professor de Apoio
+                à Tecnologia da Informação (PROATI), com experiência em manutenção e suporte técnico há <strong>3 anos</strong> e
+                sou apaixonado por tecnologia.
+              </p>
+              <p class="about-description">
+                Meu propósito é tornar a tecnologia
+                <strong>acessível</strong> a todos, oferecendo soluções
+                <strong>eficientes e econômicas</strong> para o dia a
+                dia de quem precisa estar sempre conectado.
+              </p>
+              <p class="about-description">
+                Acredito que todos podem aproveitar melhor seus dispositivos
+                quando recebem o suporte certo. Meu objetivo é deixar o seu
+                notebook
+                <strong
+                  >mais funcional, sem complicação e direto ao ponto</strong
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact" id="contato">
+        <div class="container">
+          <h2 class="section-title">Entre em Contato</h2>
+          <p class="section-subtitle">Estou pronto para ajudar você da melhor forma possível</p>
+
+          <div class="contact-content">
+            <div class="contact-info">
+              <!-- WhatsApp -->
+              <div class="contact-item">
+                <a
+                  href="https://wa.me/5511999999999"
+                  target="_blank"
+                  class="contact-link whatsapp"
+                >
+                  <i class="bi bi-whatsapp"></i>
+                  <h3 class="contact-label">WhatsApp</h3>
+                </a>
+              </div>
+              <!-- Email -->
+              <div class="contact-item">
+                <a href="mailto:dan@vasquestech.com" class="contact-link email">
+                  <i class="bi bi-envelope-at"></i>
+                  <span class="contact-label">E-mail</span>
+                </a>
+              </div>
+              <!-- LinkedIn -->
+              <div class="contact-item">
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  class="contact-link linkedin"
+                >
+                  <i class="bi bi-linkedin"></i>
+                  <span class="contact-label">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">
+          © 2025 Vasques Tech - Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS -->
     <script src="./src/js/pages/index.js" type="module"></script>
-</body>
+  </body>
 </html>
